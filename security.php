@@ -1,11 +1,7 @@
 <?php
 session_start();
-$username="courier";
-$password="##############";
-$database="courier";
-mysql_connect(localhost,$username,$password);
 
-@mysql_select_db($database) or die( "Unable to select database\n");
+require( dirname( __FILE__ ) . DIRECTORY_SEPARATOR . "config_sql.php" );
 
 // If not logged-in, redirect to main1.php
 if(!isset($_SESSION['logged2'])){

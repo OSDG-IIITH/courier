@@ -1,11 +1,6 @@
 <?php
 
-$username="root";
-$password="nitesh";	//This doesn't work. I tried it. --Akshay ;)
-$database="sample";
-mysql_connect(localhost,$username,$password);
-
-@mysql_select_db($database) or die( "Unable to select database\n");
+require( dirname( __FILE__ ) . DIRECTORY_SEPARATOR . "config_sql.php" );
 /*
 session_start();
 $error=$_GET['err'];

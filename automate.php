@@ -1,12 +1,6 @@
 <?php
 
-$username="courier";
-$password="################";
-$database="courier";
-mysql_connect(localhost,$username,$password) or die("unable to connect");
-
-
-@mysql_select_db($database) or die( "Unable to select database\n");
+require( dirname( __FILE__ ) . DIRECTORY_SEPARATOR . "config_sql.php" );
 
 
 // DON'T DELETE THIS.....This script will extract tuples from the previous database and WRITE IT INTO FILE TEXT4.PHP.

@@ -2,13 +2,8 @@
 
 session_start();
 
-$username="courier";
-$password="###############";
-$database="courier";
-mysql_connect(localhost,$username,$password);
+require( dirname( __FILE__ ) . DIRECTORY_SEPARATOR . "config_sql.php" );
 
-
-@mysql_select_db($database) or die( "Unable to select database\n");
 $from=$_POST['testinput'];
 $to=$_POST['testinput2'];
 $search=$_POST['search']; // Tells which kind of search is the user making ( On NAME, on CID , between DATES )

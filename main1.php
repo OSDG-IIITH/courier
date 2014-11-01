@@ -1,11 +1,8 @@
 <?php
 session_start();
-$username="courier";
-$password="###############";
-$database="courier";
-mysql_connect(localhost,$username,$password);
 
-@mysql_select_db($database) or die( "Unable to select database\n");
+require( dirname( __FILE__ ) . DIRECTORY_SEPARATOR . "config_sql.php" );
+
 if(isset($_GET['search'])){
 	$search=$_GET['search'];
 }

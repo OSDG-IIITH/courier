@@ -8,13 +8,9 @@ if (isset($_REQUEST['logout'])) {
        phpCAS::logout();
 }
 session_start();
-$username="courier";
-$password="###############";
-$database="courier";
-mysql_connect(localhost,$username,$password) or die("unable to connect");
 
+require( dirname( __FILE__ ) . DIRECTORY_SEPARATOR . "config_sql.php" );
 
-@mysql_select_db($database) or die( "Unable to select database\n");
 $prof=0;
 $usern=phpCAS::getUser();
 $query="select * from Student where username='$usern'";

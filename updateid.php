@@ -1,12 +1,6 @@
 <?php
 
-$username="courier";
-$password="################";
-$database="courier";
-mysql_connect(localhost,$username,$password) or die("unable to connect");
-
-
-@mysql_select_db($database) or die( "Unable to select database\n");
+require( dirname( __FILE__ ) . DIRECTORY_SEPARATOR . "config_sql.php" );
 
 $result=mysql_query("select * from Student where roll_no LIKE '20083%'");
 while($row = mysql_fetch_array($result)){
