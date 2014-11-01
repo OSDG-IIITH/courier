@@ -1,11 +1,8 @@
 <?php
 session_start();
-$username="courier";
-$password="#############";
-$database="courier";
-mysql_connect(localhost,$username,$password) or die("unable to connect");
 
-@mysql_select_db($database) or die( "Unable to select database\n");
+require( dirname( __FILE__ ) . DIRECTORY_SEPARATOR . "config_sql.php" );
+
 if(!isset($_SESSION['logged1'])){
 	header("Location:main1.php?err=2");
 }

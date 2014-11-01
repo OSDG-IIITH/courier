@@ -1,12 +1,8 @@
 <?
 session_start();  
-$username="courier";
-$password="#############";
-$database="courier";
 
+require( dirname( __FILE__ ) . DIRECTORY_SEPARATOR . "config_sql.php" );
 
-mysql_connect(localhost,$username,$password) or die("can't connect");
-@mysql_select_db($database) or die( "Unable to select database");
 $name=$_POST['user'];
 $pass=$_POST['pass'];
 echo $name,$pass;

@@ -1,9 +1,7 @@
 <?php
 session_start();
 
-$username="courier";
-$password="#############";
-$database="courier";
+require( dirname( __FILE__ ) . DIRECTORY_SEPARATOR . "config_sql.php" );
 
 $name=$_POST['name'];
 $roll=$_POST['roll'];
@@ -34,8 +32,6 @@ else{
 	   $rnpass=$_POST['rnpass'];
 	 */
 	$Room=$hostel."-".$room;
-	mysql_connect(localhost,$username,$password);
-	@mysql_select_db($database) or die( "Unable to select database");
 	mysql_query("UPDATE Student SET room_no = '$Room' WHERE roll_no='$roll'") or die("not updated");
 	mysql_query("UPDATE Student SET phone = '$phone' WHERE roll_no='$roll'") or die("not updated");
 	mysql_query("UPDATE Student SET name = '$name' WHERE roll_no='$roll'") or die("not updated");

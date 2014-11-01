@@ -1,12 +1,8 @@
 <?
-$username="courier";
-$password="##############";
-$database="courier";
+
+require( dirname( __FILE__ ) . DIRECTORY_SEPARATOR . "config_sql.php" );
 
 //get the roll no from name+roll_no
-mysql_connect(localhost,$username,$password);
-@mysql_select_db($database) or die( "Unable to select database");
-
 $name=$_POST['name'];
 $roll=$_POST['rollno'];
 $query1="select * from Student where roll_no='$roll'";

@@ -1,11 +1,6 @@
 <?php
 
-$username="courier";
-$password="###############";
-$database="courier";
-mysql_connect(localhost,$username,$password);
-
-@mysql_select_db($database) or die( "Unable to select database\n");
+require( dirname( __FILE__ ) . DIRECTORY_SEPARATOR . "config_sql.php" );
 /*
 session_start();
 $error=$_GET['err'];
